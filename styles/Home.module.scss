@@ -1,0 +1,9 @@
+@use './colors';
+
+.loginButton {
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    background: colors.$button-gradient;
+}
