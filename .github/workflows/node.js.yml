@@ -1,0 +1,31 @@
+name: CI
+on: [push, pull_request]
+jobs:
+    test:
+        runs-on: ubuntu-20.04
+
+        strategy:
+            matrix:
+                node-version: [16.x]
+
+        steps:
+            - uses: actions/checkout@v2
+            - uses: bahmutov/npm-install@HEAD
+            - run: rm -rf node_modules && yarn install --frozen-lockfile
+            - run: yarn build
+
+    prettier:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+              with:
+                  # Make sure the actual branch is checked out when running on pull requests
+                  ref: ${{ github.head_ref }}
+
+            - name: Prettify code
+              uses: creyD/prettier_action@v4.2
+              with:
+                  # This part is also where you can pass other options, for example:
+                  prettier_options: --write **/*.{ts,tsx,css,scss} --config .prettierrc
