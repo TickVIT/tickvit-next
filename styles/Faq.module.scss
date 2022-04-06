@@ -1,4 +1,4 @@
-@use "./colors";
+@use './colors';
 
 .FAQ_max_width {
     max-width: 1300px;
@@ -35,7 +35,13 @@
     font-weight: 600;
     letter-spacing: -1;
     margin: 0px;
-    background: -webkit-linear-gradient(0deg, rgb(156, 75, 9), rgb(221, 114, 26), rgb(255, 150, 52), rgb(203, 206, 30));
+    background: -webkit-linear-gradient(
+        0deg,
+        rgb(156, 75, 9),
+        rgb(221, 114, 26),
+        rgb(255, 150, 52),
+        rgb(203, 206, 30)
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -70,12 +76,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     .chevron {
         display: flex;
     }
 }
-
 
 @keyframes drop {
     0% {
