@@ -1,8 +1,8 @@
 import { NextPage } from 'next'
 import React, { ReactNode, useState } from 'react'
 import { ArrowLeft, ChevronDown } from 'react-feather'
-import classes from '../../styles/Faq.module.scss'
-import { faqData } from './_data'
+import classes from '../styles/Faq.module.scss'
+import { faqData } from '../utils/faqData'
 
 // @desc FAQ Page
 // @route /faq
