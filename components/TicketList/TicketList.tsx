@@ -2,10 +2,12 @@ import classes from './TicketList.module.scss'
 import { faker } from '@faker-js/faker'
 import { v4 as uuidv4 } from 'uuid'
 import dateFormat from 'dateformat'
+import TicketHeader from '../TicketHeader/TicketHeader'
 
 const TicketList = () => {
     return (
         <div className={classes.ticketList}>
+            <TicketHeader />
             {[...Array(10)].map(() => (
                 <TicketItem
                     key={uuidv4()}
