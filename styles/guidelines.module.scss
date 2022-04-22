@@ -1,10 +1,10 @@
 @use './colors';
 
-.overlay{
+.overlay {
     padding: 3% 10%;
     background-color: rgba(0, 0, 0, 0.438);
 
-    .container{
+    .container {
         display: flex;
         flex-direction: column;
         // gap: 1rem;
@@ -35,13 +35,14 @@
     list-style: disc;
     gap: 1rem;
 }
+
 // List items
 .listContent {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 25px;   
+    line-height: 25px;
 
     /* text-primary */
     color: #404040;
@@ -100,7 +101,6 @@
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    
     .pageHeading {
         font-size: 41px;
     }
@@ -110,11 +110,9 @@
     .note {
         font-size: 15px;
     }
-
 }
 
 @media (min-width: 426px) and (max-width: 768px) {
-
     .pageHeading {
         font-size: 35px;
     }
