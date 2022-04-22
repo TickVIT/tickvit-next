@@ -1,4 +1,3 @@
-import { NextPage } from 'next'
 import { useRef, useState } from 'react'
 import classes from '../styles/guidelines.module.scss'
 
