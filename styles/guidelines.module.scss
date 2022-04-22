@@ -1,0 +1,120 @@
+@use './colors';
+
+// Page heading
+.pageHeading {
+    position: static;
+    left: 448.68px;
+    top: 21.42px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 43.3726px;
+    line-height: 65px;
+    text-align: center;
+
+    /* text-primary */
+    color: #404040;
+}
+// unordered list
+.listBox {
+    padding: 0 5%;
+}
+// List items
+.listContent {
+    position: static;
+    left: 15px;
+    top: 0px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    // display: flex;
+
+    // align-items: center;
+
+    /* text-primary */
+    color: #404040;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 26px 0px;
+}
+// For Note
+.note {
+    position: static;
+    left: 15px;
+    top: 0px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 0 5%;
+    // display: flex;
+
+    // align-items: center;
+
+    /* text-primary */
+    color: #404040;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 26px 0px;
+}
+
+// for checkbox
+.guidelinesCheck {
+    position: static;
+    // left: 64px;
+    // top: 0px;
+
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0 5%;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    color: #000000;
+
+    /* Inside auto layout */
+    // flex: none;
+    // order: 1;
+    // flex-grow: 0;
+    // margin: 0px 10px;
+}
+// Button
+.continueButton {
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 18px;
+    margin: 0 5%;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+
+    /* Primary Blue */
+    background: colors.$primary;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-bottom: 20px;
+}
