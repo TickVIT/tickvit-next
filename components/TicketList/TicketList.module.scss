@@ -28,12 +28,13 @@
         &:hover {
             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
                 rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+            transition: all 100ms;
         }
 
         .left {
             display: flex;
             align-items: center;
-            gap: 40px;
+            gap: 25px;
         }
 
         .name {
@@ -44,7 +45,7 @@
         }
 
         .subject {
-            width: 450px;
+            width: 500px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -91,6 +92,7 @@
                     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
                         rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
                     font-size: 14px;
+                    background-color: white;
                     // margin-left: 30px;
                 }
 
@@ -102,5 +104,15 @@
                 }
             }
         }
+    }
+
+    .item.read {
+        font-weight: 400;
+        background-color: colors.$ticket-read-grey;
+    }
+
+    .item.unread {
+        font-weight: 500;
+        background-color: white;
     }
 }
