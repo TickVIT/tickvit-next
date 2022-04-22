@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import { useClickOutside } from '../../utils/useClickOutside'
 import styles from './Topbar.module.scss'
 
 const Topbar = () => {
@@ -44,6 +45,10 @@ const SearchInput = () => {
             date: 'Sep 10',
         },
     ]
+
+    const ref = useRef(null)
+
+    useClickOutside(ref, setIsOpen, isOpen)
     return (
         <div className={styles.input} onClick={() => setIsOpen(!isOpen)}>
             <Image src={'/svg/search.svg'} width={18} height={18} />
@@ -52,13 +57,13 @@ const SearchInput = () => {
             <div
                 className={styles.dropdown}
                 style={{ display: isOpen ? 'block' : 'none' }}
+                ref={ref}
             >
                 {mails.map((mail, index) => (
                     <div
                         key={index}
                         className={styles.dropdownItem}
                         onClick={() => {
-                            setValue(status)
                             setIsOpen(!isOpen)
                         }}
                     >

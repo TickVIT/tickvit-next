@@ -1,10 +1,10 @@
 .container {
     cursor: pointer;
-    border-radius: 2px;
     position: relative;
 
     .value {
         padding: 6px 12px;
+        border-radius: 4px;
         background-color: hsl(210, 11%, 96%);
         &:hover {
             background-color: hsl(210, 11%, 92%);

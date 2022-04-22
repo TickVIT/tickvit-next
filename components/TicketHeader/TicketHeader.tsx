@@ -1,8 +1,16 @@
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import CheckBox from '../CheckBox/CheckBox'
 import styles from './TicketHeader.module.scss'
 import s_styles from './SetStatus.module.scss'
+import { useClickOutside } from '../../utils/useClickOutside'
+import {
+    ArrowLeft,
+    ChevronLeft,
+    ChevronRight,
+    MoreVertical,
+    RotateCw,
+} from 'react-feather'
 
 interface Props {
     back: boolean
@@ -26,23 +34,20 @@ const TicketHeader = ({
             <div className={styles.leftHead}>
                 {back && (
                     <div className={styles.btn} title="back">
-                        <Image src={'/svg/back.svg'} height={12} width={14} />
+                        <ArrowLeft color="#939ca8" size={20} />
                     </div>
                 )}
                 {check && <CheckBox />}
+
                 {reload && (
                     <div className={styles.btn} title="reload">
-                        <Image src={'/svg/reload.svg'} height={18} width={20} />
+                        <RotateCw color="#939ca8" size={20} />
                     </div>
                 )}
                 {status && <SetStatus />}
                 {threeDots && (
                     <div className={styles.btn} title="options">
-                        <Image
-                            src={'/svg/threeDots.svg'}
-                            height={18}
-                            width={17}
-                        />
+                        <MoreVertical color="#939ca8" size={20} />
                     </div>
                 )}
             </div>
@@ -50,14 +55,10 @@ const TicketHeader = ({
                 {assign && <Assign />}
                 <div className={styles.pageNumber}>1-50 of 315</div>
                 <div className={styles.btnSecondary} title="previous">
-                    <Image
-                        src={'/svg/backward.svg'}
-                        height={13.005}
-                        width={6.495}
-                    />
+                    <ChevronLeft color="#939ca8" size={20} />
                 </div>
                 <div className={styles.btnSecondary} title="next">
-                    <Image src={'/svg/forward.svg'} height={13} width={6} />
+                    <ChevronRight color="#939ca8" size={20} />
                 </div>
             </div>
         </div>
@@ -68,7 +69,11 @@ export const SetStatus = () => {
     const [isOpen, setIsOpen] = useState(false)
     const [value, setValue] = useState('clear')
 
-    const statuses = ['Pending', 'In Progress', 'On Hold', 'Resolved']
+    const statuses = ['Pending', 'In Review', 'Solved']
+
+    const ref = useRef(null)
+
+    useClickOutside(ref, setIsOpen, isOpen)
     return (
         <div
             className={s_styles.container}
@@ -81,6 +86,7 @@ export const SetStatus = () => {
                 <Image src={'/svg/dropdown.svg'} height={5} width={8} />
             </div>
             <div
+                ref={ref}
                 className={s_styles.dropdown}
                 style={{ display: isOpen ? 'block' : 'none' }}
             >
@@ -117,6 +123,9 @@ export const Assign = () => {
     const [value, setValue] = useState('clear')
 
     const assignees = ['John Doe', 'John Smith', 'Jane Doe']
+    const ref = useRef(null)
+
+    useClickOutside(ref, setIsOpen, isOpen)
     return (
         <div
             className={s_styles.container}
@@ -129,6 +138,7 @@ export const Assign = () => {
                 <Image src={'/svg/dropdown.svg'} height={5} width={8} />
             </div>
             <div
+                ref={ref}
                 className={s_styles.dropdown}
                 style={{ display: isOpen ? 'block' : 'none' }}
             >

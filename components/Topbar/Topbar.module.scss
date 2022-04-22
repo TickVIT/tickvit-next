@@ -2,10 +2,12 @@
 
 .container {
     // min-height: 85px;
-    padding: 1rem;
+    padding: 0;
+    padding: 1rem 40px;
     width: 100%;
     max-width: 1200px;
     border: 1px solid colors.$lightest-grey;
+    max-height: 85px;
 
     display: flex;
     align-items: center;
