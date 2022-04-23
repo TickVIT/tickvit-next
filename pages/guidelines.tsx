@@ -77,7 +77,6 @@ const Guidelines = () => {
                         I agree to the Guildlines
                     </label>
                 </div>
-
                 <br />
                 <button
                     style={{ opacity: isChecked ? 0.5 : 1 }}
