@@ -15,7 +15,8 @@ const TicketList = () => {
                         faker.company.catchPhrase()
                     }
                     label={
-                        Math.round(Math.random()) === 0 ? 'Urgent' : undefined
+                        'Urgent'
+                        // Math.round(Math.random()) == 0 ? 'Urgent' : undefined
                     }
                     status="Pending"
                     date={faker.date.past()}
