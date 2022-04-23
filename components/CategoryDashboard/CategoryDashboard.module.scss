@@ -1,0 +1,73 @@
+@use '../../styles/colors';
+
+.mainBox {
+    width: fit-content;
+    min-height: 90vh;
+    border-right: 1px colors.$lightest-grey solid;
+    border-bottom: 1px colors.$lightest-grey solid;
+
+    .heading {
+        padding: 24px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        border-bottom: 1px colors.$lightest-grey solid;
+    }
+
+    .memberBox {
+        display: flex;
+        padding: 26px;
+        align-items: center;
+        // TODO: Need to add this color in the color palette
+        background-color: #f9f9f9;
+
+        .detailOuter {
+            display: flex;
+            flex-direction: column;
+            padding: 0px 20px;
+
+            .detailInner {
+                display: flex;
+                justify-content: space-between;
+
+                * {
+                    margin: 0;
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 400;
+                }
+                .pText {
+                    font-size: 17px;
+                }
+
+                .email {
+                    font-size: 13px;
+                    color: colors.$dark-grey;
+                }
+            }
+        }
+    }
+
+    .departmentRow {
+        margin: 6;
+        padding: 12px;
+        // TODO: Need to add this color in the color palette
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .departHeading {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 135%;
+            letter-spacing: -0.01em;
+            font-feature-settings: 'ss05' on;
+        }
+    }
+}

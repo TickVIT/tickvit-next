@@ -1,0 +1,75 @@
+@use '../../styles/colors';
+
+.outerBox {
+    width: fit-content;
+    margin: 10px;
+    min-height: 90vh;
+	border-right: 1px colors.$lightest-grey solid;
+    padding: 25px;
+    .firstBox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+        border-bottom: 1px colors.$lightest-grey solid;
+
+        .text {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 36px;
+            margin-right: 30px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            color: colors.$off-White;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 33px;
+            cursor: pointer;
+            border: none;
+            background: colors.$primary;
+        }
+    }
+
+    .secondBox {
+        .innerBox {
+            .section {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 26px;
+                letter-spacing: 0.05em;
+				color: colors.$dark-grey;
+				
+            }
+            .dataBox {
+                display: flex;
+                flex-direction: column;
+
+                .dataElement {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .pText {
+                        margin: 10px 0px;
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 19px;
+                        line-height: 28px;
+                    }
+
+                    .pNo {
+                        color: colors.$dark-grey;
+                    }
+                }
+            }
+        }
+    }
+}
