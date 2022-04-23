@@ -4,10 +4,21 @@ import { v4 as uuidv4 } from 'uuid'
 import dateFormat from 'dateformat'
 import { useEffect, useState } from 'react'
 import CheckBox from '../CheckBox/CheckBox'
+import TicketHeader from '../TicketHeader/TicketHeader'
+import Topbar from '../Topbar/Topbar'
 
 const TicketList = () => {
     return (
         <div className={classes.ticketList}>
+            <Topbar />
+            <TicketHeader
+                back={false}
+                reload={true}
+                check={true}
+                status={true}
+                threeDots={true}
+                assign={false}
+            />
             {[...Array(10)].map((_, index) => (
                 <TicketItem
                     key={uuidv4()}
