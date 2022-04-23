@@ -1,0 +1,49 @@
+@use '../../styles/colors';
+
+.container {
+    min-height: 49px;
+    width: 100%;
+    max-width: 1200px;
+    max-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    border: 1px solid colors.$lightest-grey;
+    padding: 10px 40px;
+
+    .btn,
+    .btnSecondary {
+        border-radius: 100%;
+        padding: 10px;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            background-color: hsl(210, 14%, 97%);
+        }
+    }
+
+    .btnSecondary {
+        padding: 4px;
+        height: 30px;
+        width: 30px;
+        // border: 1px solid black;
+    }
+
+    .leftHead,
+    .rightHead {
+        display: flex;
+        align-items: center;
+        // height: 100%;
+        gap: 20px;
+
+        .pageNumber {
+            color: #8a8a8a;
+            font-size: 14px;
+        }
+    }
+}

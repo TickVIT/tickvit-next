@@ -2,11 +2,22 @@ import classes from './TicketList.module.scss'
 import { faker } from '@faker-js/faker'
 import { v4 as uuidv4 } from 'uuid'
 import dateFormat from 'dateformat'
+import TicketHeader from '../TicketHeader/TicketHeader'
+import Topbar from '../Topbar/Topbar'
 
 const TicketList = () => {
     return (
         <div className={classes.ticketList}>
-            {[...Array(10)].map(() => (
+            <Topbar />
+            <TicketHeader
+                back={false}
+                reload={true}
+                check={true}
+                status={true}
+                threeDots={true}
+                assign={false}
+            />
+            {/* {[...Array(10)].map(() => (
                 <TicketItem
                     key={uuidv4()}
                     name={faker.name.findName() + ' 19BCX10010'}
@@ -21,7 +32,7 @@ const TicketList = () => {
                     status="Pending"
                     date={faker.date.past()}
                 />
-            ))}
+            ))} */}
         </div>
     )
 }
