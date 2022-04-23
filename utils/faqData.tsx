@@ -35,7 +35,7 @@ export const faqData = [
         answer: "If you are unsure which category to fill for your problem, you may fill your ticket in the 'Other' category. Although, be careful as to there isn't already a category for the issue you're writing the ticket for it. As, the wrong categorization leads to a delay or ticket being closed.",
     },
     {
-        question: 'When will the ticket be resolved? How will I know?',
+        question: 'When will the ticket be resolved?',
         answer: (
             <>
                 Tickets have status: Pending, In-review, Solved.
@@ -69,7 +69,7 @@ export const faqData = [
                     <li>Correct credentials for university email ID</li>
                     <li>
                         If you are able to login your Gmail, but not on TickVIT
-                        contact
+                        contact us
                     </li>
                 </ul>
             </>
