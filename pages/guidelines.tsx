@@ -51,7 +51,7 @@ const Guidelines = () => {
                     </li>
                     <li className={classes.listContent}>
                         Before filing a ticket, check the FAQs section if
-                        you&apos're issue or question has already been answered.
+                        you&apos;re issue or question has already been answered.
                         You can do so even by using the search button - to
                         search the FAQs section for your question.
                     </li>
