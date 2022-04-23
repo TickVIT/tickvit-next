@@ -17,7 +17,7 @@ const TicketList = () => {
                 threeDots={true}
                 assign={false}
             />
-            {[...Array(10)].map(() => (
+            {/* {[...Array(10)].map(() => (
                 <TicketItem
                     key={uuidv4()}
                     name={faker.name.findName() + ' 19BCX10010'}
@@ -31,7 +31,7 @@ const TicketList = () => {
                     status="Pending"
                     date={faker.date.past()}
                 />
-            ))}
+            ))} */}
         </div>
     )
 }

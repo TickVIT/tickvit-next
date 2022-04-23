@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import React, { useRef, useState } from 'react'
 import CheckBox from '../CheckBox/CheckBox'
 import styles from './TicketHeader.module.scss'
@@ -6,6 +5,7 @@ import s_styles from './SetStatus.module.scss'
 import { useClickOutside } from '../../utils/useClickOutside'
 import {
     ArrowLeft,
+    ChevronDown,
     ChevronLeft,
     ChevronRight,
     MoreVertical,
@@ -83,7 +83,7 @@ export const SetStatus = () => {
         >
             <div className={s_styles.value}>
                 <div>{value === 'clear' ? 'Set Status' : value}</div>
-                <Image src={'/svg/dropdown.svg'} height={5} width={8} />
+                <ChevronDown size={10} />
             </div>
             <div
                 ref={ref}
@@ -135,7 +135,7 @@ export const Assign = () => {
         >
             <div className={s_styles.value}>
                 <div>{value === 'clear' ? 'Assign' : value}</div>
-                <Image src={'/svg/dropdown.svg'} height={5} width={8} />
+                <ChevronDown size={10} />
             </div>
             <div
                 ref={ref}

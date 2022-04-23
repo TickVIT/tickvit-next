@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
+import { Mail, Search } from 'react-feather'
 import { useClickOutside } from '../../utils/useClickOutside'
 import styles from './Topbar.module.scss'
 
@@ -14,7 +15,12 @@ const Topbar = () => {
                     <div className={styles.post}>Admin</div>
                 </div>
                 <div className={styles.avatar}>
-                    <Image src={'/svg/avatar.svg'} width={40} height={40} />
+                    <Image
+                        src={'/svg/avatar.svg'}
+                        width={40}
+                        height={40}
+                        alt="user"
+                    />
                 </div>
             </div>
         </div>
@@ -51,7 +57,7 @@ const SearchInput = () => {
     useClickOutside(ref, setIsOpen, isOpen)
     return (
         <div className={styles.input} onClick={() => setIsOpen(!isOpen)}>
-            <Image src={'/svg/search.svg'} width={18} height={18} />
+            <Search size={18} className={styles.icon} />
             <input type="text" placeholder="Search" />
 
             <div
@@ -67,7 +73,7 @@ const SearchInput = () => {
                             setIsOpen(!isOpen)
                         }}
                     >
-                        <Image src={'/svg/mail.svg'} width={18} height={18} />
+                        <Mail size={18} className={styles.icon} />
                         <div className={styles.name}>{mail.name}</div>
                         <div className={styles.issue}>{mail.issue}</div>
                         <div className={styles.date}>{mail.date}</div>
