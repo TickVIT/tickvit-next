@@ -3,7 +3,6 @@
 .ticketList {
     display: flex;
     flex-direction: column;
-    border: 1px solid colors.$lightest-grey;
     align-items: flex-end;
 
     .item {
