@@ -1,0 +1,10 @@
+.content {
+    display: flex;
+    justify-content: flex-end;
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        max-width: 1202px;
+    }
+}
