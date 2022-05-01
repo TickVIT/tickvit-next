@@ -67,6 +67,11 @@
                         line-height: 28px;
                     }
 
+                    .pText:hover {
+                        color: colors.$primary;
+                        // font-weight: 500;
+                    }
+
                     .pNo {
                         color: colors.$dark-grey;
                     }

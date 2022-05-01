@@ -18,7 +18,7 @@ const Navbar = () => {
                         layout="intrinsic"
                     />
                 </div>
-                <div className="itemText">Tickets</div>
+                <div className={classes.itemText}>Tickets</div>
             </div>
             <div className={classes.boxItems}>
                 <div>
@@ -30,7 +30,7 @@ const Navbar = () => {
                         layout="intrinsic"
                     />
                 </div>
-                <div className="itemText notSelected">Manage</div>
+                <div className={classes.itemText}>Manage</div>
             </div>
             <div className={classes.boxItems}>
                 <div>
@@ -42,7 +42,7 @@ const Navbar = () => {
                         layout="intrinsic"
                     />
                 </div>
-                <div className="itemText notSelected">FAQs</div>
+                <div className={classes.itemText}>FAQs</div>
             </div>
         </div>
     )

@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import classes from './CategoryDashboard.module.scss'
 import Avatar from '../../static/images/Avatar.png'
-import DropDown from "../../static/icons/down.svg"
+import DropDown from '../../static/icons/down.svg'
 
 const CategoryDashboard = () => {
     return (
@@ -26,24 +26,24 @@ const CategoryDashboard = () => {
                         <p className={classes.pText}>FFCS Head</p>
                     </div>
                     <div className={classes.detailInner}>
-                        <p className={classes.email}>austin.jerry2019@vitbhopal.ac.in</p>
+                        <p className={classes.email}>
+                            austin.jerry2019@vitbhopal.ac.in
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div className={classes.departmentRow}>
-                <div className={classes.departHeading}>
-                    Departments
-                </div>
-                <div>
+                <div className={classes.departHeading}>Departments</div>
+                <div className={classes.ImageContainer}>
                     <Image
                         src={DropDown}
                         alt="icon"
                         height="10px"
                         width="10px"
                         layout="intrinsic"
+                        className={classes.downdown}
                     />
-                    
                 </div>
             </div>
         </div>

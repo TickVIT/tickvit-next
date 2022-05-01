@@ -17,12 +17,12 @@
         .itemText {
             font-family: 'Lato';
             font-style: normal;
-            font-weight: 700;
-            font-size: 7px;
-        }
+            font-weight: 500;
+            color: colors.$dark-grey;
 
-        .notSelected {
-            color: colors.$lightest-grey;
+        }
+        .itemText:hover {
+            color: colors.$rasin-black;
         }
     }
 }
