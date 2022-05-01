@@ -13,8 +13,8 @@ const Navbar = () => {
                     <Image
                         src={TICKETS}
                         alt="ticket"
-                        height="40px"
-                        width="40px"
+                        height="30px"
+                        width="30px"
                         layout="intrinsic"
                     />
                 </div>
@@ -25,8 +25,8 @@ const Navbar = () => {
                     <Image
                         src={MANAGE}
                         alt="manage"
-                        height="40px"
-                        width="40px"
+                        height="30px"
+                        width="30px"
                         layout="intrinsic"
                     />
                 </div>
@@ -37,8 +37,8 @@ const Navbar = () => {
                     <Image
                         src={FAQ}
                         alt="faq"
-                        height="40px"
-                        width="40px"
+                        height="30px"
+                        width="30px"
                         layout="intrinsic"
                     />
                 </div>
