@@ -3,10 +3,7 @@
 .ticketList {
     display: flex;
     flex-direction: column;
-    border: 1px solid colors.$lightest-grey;
     align-items: flex-end;
-    // gap: 1px;
-    padding: 10px 0;
 
     .item {
         display: flex;
@@ -14,7 +11,6 @@
         align-items: center;
         padding: 0 40px;
         min-height: 40px;
-        max-width: 1200px;
         border: 1px solid colors.$lightest-grey;
         border-bottom: none;
         width: 100%;
@@ -28,12 +24,13 @@
         &:hover {
             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
                 rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+            transition: all 100ms;
         }
 
         .left {
             display: flex;
             align-items: center;
-            gap: 40px;
+            gap: 25px;
         }
 
         .name {
@@ -44,7 +41,7 @@
         }
 
         .subject {
-            width: 450px;
+            width: 500px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -57,8 +54,10 @@
         .right {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
-            max-width: 250px;
+            justify-content: space-between;
+            gap: 25px;
+            // width: 100%;
+            // max-width: 250px;
 
             .label {
                 display: flex;
@@ -74,32 +73,55 @@
                 // margin-right: 30px;
             }
 
-            .statusDate {
+            .status {
                 display: flex;
+                justify-content: center;
                 align-items: center;
-                justify-content: space-between;
-                width: 150px;
-                margin-left: 30px;
+                padding: 3px 10px;
+                border-radius: 2px;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+                    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+                font-size: 14px;
+                width: 87px;
 
-                .status {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 3px 10px;
-                    border-radius: 2px;
+                &.pending {
                     color: colors.$dark-grey;
-                    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-                        rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-                    font-size: 14px;
-                    // margin-left: 30px;
+                    background-color: white;
                 }
 
-                .date {
-                    width: 52px;
-                    font-size: 14px;
-                    color: #5b5b5b;
-                    text-align: end;
+                &.inReview {
+                    color: white;
+                    background-color: colors.$status-blue;
                 }
+
+                &.solved {
+                    color: white;
+                    background-color: colors.$status-green;
+                }
+            }
+
+            .date {
+                width: 52px;
+                font-size: 14px;
+                color: #5b5b5b;
+                text-align: end;
+            }
+        }
+
+        &.read {
+            font-weight: 400;
+            background-color: colors.$ticket-read-grey;
+        }
+
+        &.unread {
+            font-weight: 500;
+            background-color: white;
+        }
+
+        &.read,
+        &.unread {
+            &.selected {
+                background-color: colors.$ticket-selected-blue;
             }
         }
     }
