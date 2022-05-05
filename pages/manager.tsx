@@ -1,9 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Link from 'next/link'
-import CategoryDashboard from '../components/CategoryDashboard/CategoryDashboard'
+import ManageSideBar from '../components/ManageSideBar/ManageSideBar'
 import Navbar from '../components/NavBar/Navbar'
-import SideBar from '../components/SideBar/SideBar'
 
 // @desc Manager Page
 // @route /manager
@@ -22,8 +20,7 @@ const Manager: NextPage = () => {
             {/* code goes below */}
             <div style={{ display: 'flex' }}>
                 <Navbar />
-                <SideBar />
-                <CategoryDashboard />
+                <ManageSideBar />
             </div>
         </div>
     )

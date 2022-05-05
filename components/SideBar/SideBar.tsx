@@ -1,4 +1,4 @@
-import React from 'react'
+import { Plus } from 'react-feather'
 import classes from './SideBar.module.scss'
 
 const SideBar = () => {
@@ -7,7 +7,9 @@ const SideBar = () => {
             <div className={classes.firstBox}>
                 <div className={classes.text}>Tickets</div>
                 <div className={classes.button}>
-                    <button className={classes.btn}>+ New Ticket</button>
+                    <button className={classes.btn}>
+                        <Plus /> New Ticket
+                    </button>
                 </div>
             </div>
 
@@ -57,9 +59,7 @@ const SideBar = () => {
                                 <p className={classes.pText}>1</p>
                             </div>
                             <div className={classes.dataElement}>
-                                <p className={classes.pText}>
-                                    Add course
-                                </p>
+                                <p className={classes.pText}>Add course</p>
                                 <p className={classes.pText}>4</p>
                             </div>
                             <div className={classes.dataElement}>

@@ -1,10 +1,8 @@
 import Image from 'next/image'
-import React from 'react'
-import classes from './CategoryDashboard.module.scss'
-import Avatar from '../../static/images/Avatar.png'
-import DropDown from '../../static/icons/down.svg'
+import { ChevronDown } from 'react-feather'
+import classes from './ManageSideBar.module.scss'
 
-const CategoryDashboard = () => {
+const ManageSideBar = () => {
     return (
         <div className={classes.mainBox}>
             <div className={classes.heading}>Details</div>
@@ -12,7 +10,7 @@ const CategoryDashboard = () => {
             <div className={classes.memberBox}>
                 <div>
                     <Image
-                        src={Avatar}
+                        src={'/svg/avatar.svg'}
                         alt="photo"
                         height="70px"
                         width="70px"
@@ -36,18 +34,11 @@ const CategoryDashboard = () => {
             <div className={classes.departmentRow}>
                 <div className={classes.departHeading}>Departments</div>
                 <div className={classes.ImageContainer}>
-                    <Image
-                        src={DropDown}
-                        alt="icon"
-                        height="10px"
-                        width="10px"
-                        layout="intrinsic"
-                        className={classes.downdown}
-                    />
+                    <ChevronDown size={15} />
                 </div>
             </div>
         </div>
     )
 }
 
-export default CategoryDashboard
+export default ManageSideBar

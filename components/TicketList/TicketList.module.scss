@@ -41,10 +41,12 @@
         }
 
         .subject {
-            width: 500px;
+            // max-width: 500px;
+            width: 100%;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            // display: flex;
         }
         .subject,
         .name {
@@ -101,8 +103,8 @@
             }
 
             .date {
-                width: 52px;
-                font-size: 14px;
+                width: 56px;
+                font-size: 13px;
                 color: #5b5b5b;
                 text-align: end;
             }

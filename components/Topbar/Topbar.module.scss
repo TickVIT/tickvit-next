@@ -6,9 +6,13 @@
     padding: 1rem 40px;
     width: 100%;
     border: 1px solid colors.$lightest-grey;
+    top: 0;
+    position: sticky;
     max-height: 85px;
     display: flex;
     align-items: center;
+    z-index: 600;
+    background-color: white;
 
     justify-content: space-between;
 
@@ -52,10 +56,6 @@
                     text-align: left;
                     flex: 1;
                     min-width: 250px;
-                }
-
-                .issue {
-                    // min-width: 100%;
                 }
 
                 .date {
