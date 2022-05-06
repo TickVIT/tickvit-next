@@ -11,6 +11,7 @@ import {
     MoreVertical,
     RotateCw,
 } from 'react-feather'
+import { useCheckBox } from '../../hooks/useCheckBox'
 
 interface Props {
     back: boolean
@@ -29,6 +30,7 @@ const TicketHeader = ({
     check,
     assign,
 }: Props) => {
+    const items = useCheckBox((state) => state.items)
     return (
         <div className={styles.container}>
             <div className={styles.leftHead}>
@@ -37,7 +39,15 @@ const TicketHeader = ({
                         <ArrowLeft color="#939ca8" size={20} />
                     </div>
                 )}
-                {check && <CheckBox />}
+                {check && (
+                    <CheckBox
+                        name="selectAll"
+                        checked={
+                            items.filter((item) => item.isChecked !== true)
+                                .length < 1
+                        }
+                    />
+                )}
 
                 {reload && (
                     <div className={styles.btn} title="reload">
@@ -76,6 +86,7 @@ export const SetStatus = () => {
     useClickOutside(ref, setIsOpen, isOpen)
     return (
         <div
+            ref={ref}
             className={s_styles.container}
             onClick={() => {
                 setIsOpen(!isOpen)
