@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
+import Signin from '../components/SignIn/Signin'
 import classes from '../styles/Home.module.scss'
 
 // @desc Login Page
@@ -18,10 +19,7 @@ const Home: NextPage = () => {
             </Head>
 
             {/* code goes below */}
-
-            <Link href="/tickets" passHref>
-                <button className={classes.loginButton}>Login</button>
-            </Link>
+            <Signin/>
         </div>
     )
 }

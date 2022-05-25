@@ -1,12 +1,5 @@
-@use './colors';
+@use '../../styles/colors';
 
-.loginButton {
-    padding: 10px 20px;
-    color: white;
-    cursor: pointer;
-    border: none;
-    background: colors.$button-gradient;
-}
 .loginButton {
     border-radius: 0.25rem;
     padding: 10px 50px;
@@ -33,33 +26,33 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 116.5%;
 }
 
 .loginContainer{
-    margin-top: 22rem ;
+    margin-top: 18rem ;
     margin-left: 7rem;
     margin-right: 7rem;
-    background-color: aliceblue;
+    // background-color: aliceblue;
 }
 
 .vitLogoContainer{
     background-color: aquamarine;
     margin-left: 7rem;
     margin-top: 1rem;
+    position: relative;
 }
 
 .loginLogo {
     font-family: 'Jandoni';
     font-style: normal;
     font-weight: 400;
-    font-size: 75px;
-    background: linear-gradient(94.47deg, #EE5622 8.69%, #ECA72C 91.83%);
+    font-size: 175px;
+    background: linear-gradient(74.47deg, #EE5622 8.69%, #ECA72C 91.83%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    
 
 }
 
@@ -76,3 +69,19 @@
     line-height: 43px;
     letter-spacing: 0.3em;
 }
+
+.bgWrap {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .bgText {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    padding-top: 40vh;
+    text-shadow: 1px 1px 1px #3c5c5e;
+  }
