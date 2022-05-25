@@ -30,6 +30,7 @@ const Signin: NextPage = () => {
                         objectFit="cover"
                         quality={100}
                         alt="Background"
+                        className={classes.backgroundImg}
                     />
                     {/* </div> */}
 
