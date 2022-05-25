@@ -13,10 +13,10 @@ const Signin: NextPage = () => {
                 <Head>
                     <title>TickVIT</title>
                     <meta
-                        name='description'
-                        content='An Online Help Ticket System which facilitates in the faculty and students to resolve issues in a simple and organized manner.'
+                        name="description"
+                        content="An Online Help Ticket System which facilitates in the faculty and students to resolve issues in a simple and organized manner."
                     />
-                    <link rel='icon' href='/favicon.ico' />
+                    <link rel="icon" href="/favicon.ico" />
                 </Head>
 
                 {/* code goes below */}
@@ -25,11 +25,11 @@ const Signin: NextPage = () => {
                 <div className={classes.loginContainer}>
                     {/* <div className={classes.bgWrap}> */}
                     <Image
-                        src='/svg/bghome.svg'
-                        layout='fill'
-                        objectFit='cover'
+                        src="/svg/bghome.svg"
+                        layout="fill"
+                        objectFit="cover"
                         quality={100}
-                        alt='Background'
+                        alt="Background"
                     />
                     {/* </div> */}
 
@@ -41,7 +41,7 @@ const Signin: NextPage = () => {
                         Online Help Ticket System to facitilate faculty <br />
                         and student in resolving issues.
                     </div>
-                    <Link href='/tickets' passHref>
+                    <Link href="/tickets" passHref>
                         <button className={classes.loginButton}>SIGN IN</button>
                     </Link>
                 </div>

@@ -19,7 +19,7 @@ const Home: NextPage = () => {
             </Head>
 
             {/* code goes below */}
-            <Signin/>
+            <Signin />
         </div>
     )
 }
