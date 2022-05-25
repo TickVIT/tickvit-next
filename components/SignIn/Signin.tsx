@@ -23,16 +23,16 @@ const Signin: NextPage = () => {
                 {/* <img className={classes.vitLogoContainer} alt='' /> */}
 
                 <div className={classes.loginContainer}>
-                    {/* <div className={classes.bgWrap}> */}
-                    <Image
-                        src="/svg/bghome.svg"
-                        layout="fill"
-                        objectFit="cover"
-                        quality={100}
-                        alt="Background"
-                        className={classes.backgroundImg}
-                    />
-                    {/* </div> */}
+                    <div className={classes.bgWrap}>
+                        <Image
+                            src="/svg/bghome.svg"
+                            layout="fill"
+                            objectFit="cover"
+                            quality={100}
+                            alt="Background"
+                            // className={classes.backgroundImg}
+                        />
+                    </div>
 
                     <div className={classes.poppinsText}>
                         CREATE A TICKET WITH

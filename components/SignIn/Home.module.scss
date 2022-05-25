@@ -70,10 +70,13 @@
 }
 
 .bgWrap {
+    position: absolute;
+    top: 0;
+    right: 0;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    z-index: -1;
+    z-index: -100;
 }
 
 .bgText {
@@ -83,8 +86,4 @@
     text-align: center;
     padding-top: 40vh;
     text-shadow: 1px 1px 1px #3c5c5e;
-}
-
-.backgroundImg {
-    z-index: -100;
 }
