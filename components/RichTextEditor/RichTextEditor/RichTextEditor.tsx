@@ -3,9 +3,15 @@ import { Plus, X } from 'react-feather'
 import styles from './RichTextEditor.module.scss'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
+import { Interface } from 'readline'
+
+interface props {
+    isSubject: boolean
+    isCategory: boolean
+}
 
 // Use DynamicExport to prevent SSR
-const RichTextEditor = () => {
+const RichTextEditor = ({ isSubject, isCategory }: props) => {
     const [subject, setSubject] = useState('')
     const [category, setCategory] = useState('')
     const [message, setMessage] = useState('')
@@ -29,20 +35,28 @@ const RichTextEditor = () => {
                 </div>
             </div>
             <div className={styles.subContainer}>
-                <input
-                    value={subject}
-                    type="text"
-                    placeholder="Subject"
-                    onChange={(e) => setSubject(e.target.value)}
-                />
-                <div className={styles.divider}></div>
-                <input
-                    value={category}
-                    type="text"
-                    placeholder="Category"
-                    onChange={(e) => setCategory(e.target.value)}
-                />
-                <div className={styles.divider}></div>
+                {isSubject && (
+                    <>
+                        <input
+                            value={subject}
+                            type="text"
+                            placeholder="Subject"
+                            onChange={(e) => setSubject(e.target.value)}
+                        />
+                        <div className={styles.divider}></div>
+                    </>
+                )}
+                {isCategory && (
+                    <>
+                        <input
+                            value={category}
+                            type="text"
+                            placeholder="Category"
+                            onChange={(e) => setCategory(e.target.value)}
+                        />
+                        <div className={styles.divider}></div>
+                    </>
+                )}
 
                 <ReactQuill
                     placeholder="Type a message ..."

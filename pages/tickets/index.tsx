@@ -24,7 +24,7 @@ const Tickets: NextPage = () => {
                 />
                 <TicketList />
             </div>
-            <RichTextEditor />
+            <RichTextEditor isCategory={true} isSubject={true} />
         </div>
     )
 }
