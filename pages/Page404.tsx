@@ -19,7 +19,7 @@ const Page404: NextPage = () => {
             </Head>
 
             {/* code goes below */}
-            < Thepage404 />
+            <Thepage404 />
         </div>
     )
 }

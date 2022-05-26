@@ -21,14 +21,14 @@ const thepage404: NextPage = () => {
 
                 {/* code goes below */}
                 <div className={classes.vitLogoContainer}>
-                        <Image
-                            src="/svg/vitbhopallogo.svg"
-                            quality={100}
-                            width= "200px"
-                            height="200px"
-                            alt="Background"
-                        />
-                    </div>
+                    <Image
+                        src="/svg/vitbhopallogo.svg"
+                        quality={100}
+                        width="200px"
+                        height="200px"
+                        alt="Background"
+                    />
+                </div>
                 {/* <img className={classes.vitLogoContainer} alt='' /> */}
 
                 <div className={classes.loginContainer}>
@@ -44,10 +44,11 @@ const thepage404: NextPage = () => {
                     </div>
 
                     <div className={classes.headingText}>
-                        404 PAGE NOT FOUND   
+                        404 PAGE NOT FOUND
                     </div>
                     <div className={classes.normalText}>
-                        Looks like you wound up somewhere you're <br/>not supposed to be.
+                        Looks like you wound up somewhere you're <br />
+                        not supposed to be.
                     </div>
                     <Link href="/tickets" passHref>
                         <button className={classes.loginButton}>SIGN IN</button>

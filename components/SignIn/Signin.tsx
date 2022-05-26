@@ -21,14 +21,14 @@ const Signin: NextPage = () => {
 
                 {/* code goes below */}
                 <div className={classes.vitLogoContainer}>
-                        <Image
-                            src="/svg/vitbhopallogo.svg"
-                            quality={100}
-                            width= "200px"
-                            height="200px"
-                            alt="Background"
-                        />
-                    </div>
+                    <Image
+                        src="/svg/vitbhopallogo.svg"
+                        quality={100}
+                        width="200px"
+                        height="200px"
+                        alt="Background"
+                    />
+                </div>
                 {/* <img className={classes.vitLogoContainer} alt='' /> */}
 
                 <div className={classes.loginContainer}>
