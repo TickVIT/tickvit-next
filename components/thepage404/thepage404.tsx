@@ -29,7 +29,6 @@ const thepage404: NextPage = () => {
                         alt="Background"
                     />
                 </div>
-                {/* <img className={classes.vitLogoContainer} alt='' /> */}
 
                 <div className={classes.loginContainer}>
                     <div className={classes.bgWrap}>
@@ -39,7 +38,6 @@ const thepage404: NextPage = () => {
                             objectFit="cover"
                             quality={100}
                             alt="Background"
-                            // className={classes.backgroundImg}
                         />
                     </div>
 
