@@ -71,7 +71,7 @@ const RichTextEditor = ({ isSubject, isCategory }: props) => {
                 </div>
                 <div className={styles.btns}>
                     <button className={`${styles.btnRed} ${styles.button}`}>
-                        <Plus color="#ff0000" size={20} />
+                        <Plus color="#ff0000" size={15} />
                         Urgent
                     </button>
                     <button
