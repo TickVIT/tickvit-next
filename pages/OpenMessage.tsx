@@ -35,7 +35,7 @@ const Message: NextPage = () => {
                     />
                 </div>
                 <MessageView />
-                <RichTextEditor/>
+                <RichTextEditor />
             </div>
         </div>
     )
