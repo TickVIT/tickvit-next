@@ -1,5 +1,13 @@
 @use '../../styles/colors';
 
+.loginContainer {
+    // margin-left: 7rem;
+    // margin-right: 7rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 18rem;
+}
+
 .loginButton {
     border-radius: 0.25rem;
     padding: 10px 50px;
@@ -7,60 +15,43 @@
     cursor: pointer;
     border: none;
     background: colors.$button-gradient;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .headingText {
     color: rgba(97, 117, 138, 1);
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 37px;
     line-height: 116.5%;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.3vw;
 }
 
 .normalText {
     color: rgba(48, 45, 57, 1);
-    margin-top: 1rem;
     margin-bottom: 1rem;
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 1.5rem;
     line-height: 116.5%;
-}
-
-.loginContainer {
-    margin-top: 18rem;
-    margin-left: 7rem;
-    margin-right: 7rem;
+    max-width: 35rem;
 }
 
 .vitLogoContainer {
-    top: 20px;
-    margin-left: 7rem;
-    margin-top: 1rem;
-    position: absolute;
+    margin-top: -15rem;
 }
 
 .loginLogo {
-    font-family: 'Jandoni';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 175px;
-    background: linear-gradient(74.47deg, #ee5622 8.69%, #eca72c 91.83%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.googleLogo {
-    margin-left: 4px;
-    margin-right: 4px;
+    margin: 20px 0;
 }
 
 .poppinsText {
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 37px;
@@ -85,4 +76,8 @@
     text-align: center;
     padding-top: 40vh;
     text-shadow: 1px 1px 1px #3c5c5e;
+}
+
+.overflow-hidden {
+    overflow-y: hidden;
 }

@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import Loginpage from '../components/loginfailed/LoginFailed'
+import LoginFailed from '../components/loginfailed/LoginFailed'
 import classes from '../styles/Home.module.scss'
 
 // @desc Page 404
@@ -18,8 +18,7 @@ const loginfailed: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            {/* code goes below */}
-            <Loginpage />
+            <LoginFailed />
         </div>
     )
 }

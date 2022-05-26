@@ -38,7 +38,6 @@ const LoginFailed: NextPage = () => {
                             objectFit="cover"
                             quality={100}
                             alt="Background"
-                            // className={classes.backgroundImg}
                         />
                     </div>
 
