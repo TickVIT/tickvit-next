@@ -1,5 +1,6 @@
 import { NextPage } from 'next'
-import React from 'react'
+import Navbar from '../../components/NavBar/Navbar'
+import SideBar from '../../components/SideBar/SideBar'
 import TicketHeader from '../../components/TicketHeader/TicketHeader'
 import TicketList from '../../components/TicketList/TicketList'
 import Topbar from '../../components/Topbar/Topbar'
@@ -10,6 +11,8 @@ import classes from '../../styles/Tickets.module.scss'
 const Tickets: NextPage = () => {
     return (
         <div className={classes.content}>
+            <Navbar />
+            <SideBar />
             <div className={classes.main}>
                 <Topbar />
                 <TicketHeader

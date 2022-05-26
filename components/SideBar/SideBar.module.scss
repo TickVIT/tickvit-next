@@ -1,0 +1,93 @@
+@use '../../styles/colors';
+
+.outerBox {
+    height: 100vh;
+    border-right: 1px colors.$lightest-grey solid;
+    top: 0;
+    position: sticky;
+    // min-width: ;
+    width: 100%;
+    padding: 28px 20px;
+    .firstBox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+        border-bottom: 1px colors.$lightest-grey solid;
+
+        .text {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 36px;
+            // margin-right: 30px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            min-width: 135px;
+            // gap: 10px;
+            padding: 5px 10px;
+            color: colors.$off-White;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 33px;
+            cursor: pointer;
+            border: none;
+            background: colors.$primary;
+            border-radius: 3px;
+
+            &:hover {
+                filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
+                    drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+            }
+        }
+    }
+
+    .secondBox {
+        .innerBox {
+            .section {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 26px;
+                letter-spacing: 0.05em;
+                color: colors.$dark-grey;
+            }
+            .dataBox {
+                display: flex;
+                flex-direction: column;
+
+                .dataElement {
+                    display: flex;
+                    justify-content: space-between;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: colors.$primary;
+                        // font-weight: 500;
+                    }
+                    .pText {
+                        margin: 10px 0px;
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 28px;
+                    }
+
+                    .pNo {
+                        color: colors.$dark-grey;
+                    }
+                }
+            }
+        }
+    }
+}

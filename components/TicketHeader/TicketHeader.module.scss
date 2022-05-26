@@ -9,6 +9,10 @@
     align-content: center;
     border: 1px solid colors.$lightest-grey;
     padding: 10px 40px;
+    z-index: 500;
+    top: 85px;
+    position: sticky;
+    background-color: white;
 
     .btn,
     .btnSecondary {

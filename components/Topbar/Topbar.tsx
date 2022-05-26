@@ -17,8 +17,8 @@ const Topbar = () => {
                 <div className={styles.avatar}>
                     <Image
                         src={'/svg/avatar.svg'}
-                        width={40}
-                        height={40}
+                        width={45}
+                        height={45}
                         alt="user"
                     />
                 </div>
@@ -56,7 +56,11 @@ const SearchInput = () => {
 
     useClickOutside(ref, setIsOpen, isOpen)
     return (
-        <div className={styles.input} onClick={() => setIsOpen(!isOpen)}>
+        <div
+            ref={ref}
+            className={styles.input}
+            onClick={() => setIsOpen(!isOpen)}
+        >
             <Search size={18} className={styles.icon} />
             <input type="text" placeholder="Search" />
 
