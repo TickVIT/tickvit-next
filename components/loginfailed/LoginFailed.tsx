@@ -42,11 +42,10 @@ const LoginFailed: NextPage = () => {
                         />
                     </div>
 
-                    <div className={classes.headingText}>
-                        LOGIN FAILED
-                    </div>
+                    <div className={classes.headingText}>LOGIN FAILED</div>
                     <div className={classes.normalText}>
-                        To login succesfully ensure you use your VIT Bhopal Email ID. <br />
+                        To login succesfully ensure you use your VIT Bhopal
+                        Email ID. <br />
                         Contact sdc@vitbhopal.ac.in if the issue persists.
                     </div>
                     <Link href="/tickets" passHref>
