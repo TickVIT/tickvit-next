@@ -1,0 +1,83 @@
+@use '../../styles/colors';
+
+.loginContainer {
+    // margin-left: 7rem;
+    // margin-right: 7rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 18rem;
+}
+
+.loginButton {
+    border-radius: 0.25rem;
+    padding: 10px 50px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    background: colors.$button-gradient;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.headingText {
+    color: rgba(97, 117, 138, 1);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 37px;
+    line-height: 116.5%;
+    letter-spacing: 0.3vw;
+}
+
+.normalText {
+    color: rgba(48, 45, 57, 1);
+    margin-bottom: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 116.5%;
+    max-width: 35rem;
+}
+
+.vitLogoContainer {
+    margin-top: -15rem;
+}
+
+.loginLogo {
+    margin: 20px 0;
+}
+
+.poppinsText {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 37px;
+    line-height: 43px;
+    letter-spacing: 0.3em;
+}
+
+.bgWrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.bgText {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    padding-top: 40vh;
+    text-shadow: 1px 1px 1px #3c5c5e;
+}
+
+.overflow-hidden {
+    overflow-y: hidden;
+}

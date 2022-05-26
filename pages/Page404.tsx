@@ -1,13 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import SignIn from '../components/SignIn/SignIn'
-import LoginFailed from '../components/loginfailed/LoginFailed'
+import Thepage404 from '../components/thepage404/thepage404'
 import classes from '../styles/Home.module.scss'
 
-// @desc Login Page
+// @desc Page 404
 // @route /
-const Home: NextPage = () => {
+const Page404: NextPage = () => {
     return (
         <div>
             <Head>
@@ -18,9 +17,11 @@ const Home: NextPage = () => {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <SignIn />
+
+            {/* code goes below */}
+            <Thepage404 />
         </div>
     )
 }
 
-export default Home
+export default Page404
