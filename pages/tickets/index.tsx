@@ -1,5 +1,6 @@
 import { NextPage } from 'next'
 import React from 'react'
+import { RichTextEditor } from '../../components/RichTextEditor/RichTextEditor'
 import TicketHeader from '../../components/TicketHeader/TicketHeader'
 import TicketList from '../../components/TicketList/TicketList'
 import Topbar from '../../components/Topbar/Topbar'
@@ -22,6 +23,7 @@ const Tickets: NextPage = () => {
                 />
                 <TicketList />
             </div>
+            <RichTextEditor />
         </div>
     )
 }
