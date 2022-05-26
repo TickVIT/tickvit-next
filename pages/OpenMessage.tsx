@@ -1,10 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import classes from '../styles/OpenMessage.module.scss'
-import { RichTextEditor } from '../components/RichTextEditor/RichTextEditor'
 import TicketHeader from '../components/TicketHeader/TicketHeader'
 import Topbar from '../components/Topbar/Topbar'
 import MessageView from '../components/MessageView/MessageView'
+import RichTextEditor from '../components/RichTextEditor/RichTextEditor'
 
 // @desc Upon Openning a message
 // @route /OpenMessage
@@ -35,7 +35,7 @@ const Message: NextPage = () => {
                     />
                 </div>
                 <MessageView />
-                {/* <RichTextEditor/> */}
+                <RichTextEditor/>
             </div>
         </div>
     )

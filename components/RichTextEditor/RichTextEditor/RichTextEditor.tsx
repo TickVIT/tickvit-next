@@ -1,22 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import {
-    AlignCenter,
-    AlignLeft,
-    AlignRight,
-    Bold,
-    Italic,
-    Link2,
-    List,
-    Paperclip,
-    Plus,
-    Underline,
-    X,
-} from 'react-feather'
+import { Plus, X } from 'react-feather'
 import styles from './RichTextEditor.module.scss'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 
-export const RichTextEditor = () => {
+// Use DynamicExport to prevent SSR
+const RichTextEditor = () => {
     const [subject, setSubject] = useState('')
     const [category, setCategory] = useState('')
     const [message, setMessage] = useState('')
@@ -30,6 +19,7 @@ export const RichTextEditor = () => {
         setCategory('')
         setMessage('')
     }
+
     return (
         <div className={styles.container}>
             <div className={styles.header}>
@@ -92,3 +82,5 @@ RichTextEditor.modules = {
         [{ align: [] }],
     ],
 }
+
+export default RichTextEditor
