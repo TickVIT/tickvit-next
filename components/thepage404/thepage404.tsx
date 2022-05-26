@@ -45,7 +45,7 @@ const thepage404: NextPage = () => {
                         404 PAGE NOT FOUND
                     </div>
                     <div className={classes.normalText}>
-                        Looks like you wound up somewhere you're <br />
+                        Looks like you wound up somewhere you&apos;re <br />
                         not supposed to be.
                     </div>
                     <Link href="/tickets" passHref>
