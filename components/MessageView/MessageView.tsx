@@ -16,7 +16,7 @@ const MessageView = () => {
                             src={'/svg/avatar.svg'}
                             width={40}
                             height={40}
-                            alt='user'
+                            alt="user"
                         />
                     </div>
                     <div className={classes.senderDetails}>
@@ -34,9 +34,11 @@ const MessageView = () => {
                         Course Registration Issue - Slot Full
                     </div>
                     <div className={classes.messageBody}>
-                        Respected sir/ma’am,<br></br><br></br> I couldn’t register for CSE1001 due
-                        to slots being full. I request you to assist me in this
-                        issue. <br></br><br></br>Thank you, 19BCY10XXXX
+                        Respected sir/ma’am,<br></br>
+                        <br></br> I couldn’t register for CSE1001 due to slots
+                        being full. I request you to assist me in this issue.{' '}
+                        <br></br>
+                        <br></br>Thank you, 19BCY10XXXX
                     </div>
                 </div>
                 <div className={classes.hr}></div>
@@ -46,7 +48,7 @@ const MessageView = () => {
                             src={'/svg/avatar.svg'}
                             width={40}
                             height={40}
-                            alt='user'
+                            alt="user"
                         />
                     </div>
                     <div className={classes.senderDetails}>
@@ -61,11 +63,11 @@ const MessageView = () => {
                 </div>
                 <div className={classes.messageContent}>
                     <div className={classes.messageBody}>
-                    Transfered the ticket to FFCS Team for them too look into it.
+                        Transfered the ticket to FFCS Team for them too look
+                        into it.
                     </div>
                 </div>
             </div>
-           
         </>
     )
 }

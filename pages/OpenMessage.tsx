@@ -23,20 +23,20 @@ const Message: NextPage = () => {
             {/* code goes below */}
 
             <div className={classes.content}>
-            <div className={classes.main}>
-                <Topbar />
-                <TicketHeader
-                    back={true}
-                    reload={false}
-                    check={false}
-                    status={true}
-                    threeDots={false}
-                    assign={true}
-                />
+                <div className={classes.main}>
+                    <Topbar />
+                    <TicketHeader
+                        back={true}
+                        reload={false}
+                        check={false}
+                        status={true}
+                        threeDots={false}
+                        assign={true}
+                    />
+                </div>
+                <MessageView />
+                {/* <RichTextEditor/> */}
             </div>
-            <MessageView />
-            {/* <RichTextEditor/> */}
-        </div>
         </div>
     )
 }
