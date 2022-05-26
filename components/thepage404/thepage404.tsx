@@ -1,12 +1,12 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import classes from './Home.module.scss'
+import classes from './thepage404.module.scss'
 import Image from 'next/image'
 
 // @desc Login Page
 // @route /
-const Signin: NextPage = () => {
+const thepage404: NextPage = () => {
     return (
         <>
             <div>
@@ -43,13 +43,11 @@ const Signin: NextPage = () => {
                         />
                     </div>
 
-                    <div className={classes.poppinsText}>
-                        CREATE A TICKET WITH
+                    <div className={classes.headingText}>
+                        404 PAGE NOT FOUND   
                     </div>
-                    <div className={classes.loginLogo}>TICKVIT</div>
                     <div className={classes.normalText}>
-                        Online Help Ticket System to facitilate faculty <br />
-                        and student in resolving issues.
+                        Looks like you wound up somewhere you're <br/>not supposed to be.
                     </div>
                     <Link href="/tickets" passHref>
                         <button className={classes.loginButton}>SIGN IN</button>
@@ -60,4 +58,4 @@ const Signin: NextPage = () => {
     )
 }
 
-export default Signin
+export default thepage404
