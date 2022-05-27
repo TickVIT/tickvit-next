@@ -3,6 +3,7 @@ import React, { ReactNode, useState } from 'react'
 import { ArrowLeft, ChevronDown } from 'react-feather'
 import classes from '../styles/Faq.module.scss'
 import { faqData } from '../utils/faqData'
+import Link from 'next/link'
 
 // @desc FAQ Page
 // @route /faq
@@ -10,9 +11,11 @@ const Faq: NextPage = () => {
     return (
         <section className={classes.FAQ_home}>
             <div className={classes.FAQ_max_width}>
+            <Link href='/tickets' passHref>
                 <div className={classes.fa}>
                     <ArrowLeft className={classes.arrow} size={18} /> Back
                 </div>
+                </Link>
                 <div className={classes.FAQ_home_content}>
                     <h1>
                         T<span>ICK</span>VIT
