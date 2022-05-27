@@ -11,10 +11,10 @@ const Faq: NextPage = () => {
     return (
         <section className={classes.FAQ_home}>
             <div className={classes.FAQ_max_width}>
-            <Link href='/tickets' passHref>
-                <div className={classes.fa}>
-                    <ArrowLeft className={classes.arrow} size={18} /> Back
-                </div>
+                <Link href="/tickets" passHref>
+                    <div className={classes.fa}>
+                        <ArrowLeft className={classes.arrow} size={18} /> Back
+                    </div>
                 </Link>
                 <div className={classes.FAQ_home_content}>
                     <h1>

@@ -11,29 +11,30 @@ const Navbar = () => {
     const [selected, setSelected] = useState(true)
     return (
         <div className={classes.outerBox}>
-            <Link href='/tickets' passHref>
+            <Link href="/tickets" passHref>
                 <div
-                    className={`${classes.boxItems} ${selected &&
-                        classes.selected}`}
+                    className={`${classes.boxItems} ${
+                        selected && classes.selected
+                    }`}
                 >
                     <div className={classes.icon}>
-                        <Tickets height={30} width={30} strokeWidth='1.5px' />
+                        <Tickets height={30} width={30} strokeWidth="1.5px" />
                     </div>
                     <div className={classes.itemText}>Tickets</div>
                 </div>
             </Link>
-            <Link href='/manager' passHref>
+            <Link href="/manager" passHref>
                 <div className={classes.boxItems}>
                     <div className={classes.icon}>
-                        <Users height={30} width={30} strokeWidth='1.5px' />
+                        <Users height={30} width={30} strokeWidth="1.5px" />
                     </div>
                     <div className={classes.itemText}>Manage</div>
                 </div>
             </Link>
-            <Link href='/faq' passHref>
+            <Link href="/faq" passHref>
                 <div className={classes.boxItems}>
                     <div className={classes.icon}>
-                        <FAQ height={30} width={30} strokeWidth='1.5px' />
+                        <FAQ height={30} width={30} strokeWidth="1.5px" />
                     </div>
                     <div className={classes.itemText}>FAQs</div>
                 </div>
