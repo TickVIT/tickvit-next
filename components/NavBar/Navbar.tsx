@@ -1,37 +1,23 @@
-import React, { useState } from 'react'
+import { useRouter } from 'next/router'
+import { NavbarData } from '../../utils/navBarData'
 import classes from './Navbar.module.scss'
-import Image from 'next/image'
-import Tickets from '../../public/svg/tickets.svg'
-import Manage from '../../public/svg/manage.svg'
-import FAQ from '../../public/svg/faq.svg'
-import { File, Users } from 'react-feather'
+import { v4 as uuidv4 } from 'uuid'
+import NavbarItem from './NavbarItem'
 
 const Navbar = () => {
-    const [selected, setSelected] = useState(true)
+    const router = useRouter()
+
     return (
         <div className={classes.outerBox}>
-            <div
-                className={`${classes.boxItems} ${
-                    selected && classes.selected
-                }`}
-            >
-                <div className={classes.icon}>
-                    <Tickets height={30} width={30} />
-                </div>
-                <div className={classes.itemText}>Tickets</div>
-            </div>
-            <div className={classes.boxItems}>
-                <div className={classes.icon}>
-                    <Users height={30} width={30} />
-                </div>
-                <div className={classes.itemText}>Manage</div>
-            </div>
-            <div className={classes.boxItems}>
-                <div className={classes.icon}>
-                    <FAQ height={30} width={30} />
-                </div>
-                <div className={classes.itemText}>FAQs</div>
-            </div>
+            {NavbarData.map((item) => (
+                <NavbarItem
+                    key={uuidv4()}
+                    route={item.route}
+                    currentRoute={router.pathname}
+                    icon={item.Icon}
+                    text={item.text}
+                />
+            ))}
         </div>
     )
 }
