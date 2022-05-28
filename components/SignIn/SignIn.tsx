@@ -1,20 +1,14 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
-import Link from 'next/link'
-import classes from './SignIn.module.scss'
 import Image from 'next/image'
-import { useEffect } from 'react'
+import Link from 'next/link'
+import { useOverFlowHidden } from '../../hooks/useOverflowHidden'
+import classes from './SignIn.module.scss'
 
 // @desc Login Page
 // @route /
 const SignIn: NextPage = () => {
-    useEffect(() => {
-        document.body.classList.add(classes['overflow-hidden'])
-
-        return () => {
-            document.body.classList.remove(classes['overflow-hidden'])
-        }
-    }, [])
+    useOverFlowHidden()
 
     return (
         <>

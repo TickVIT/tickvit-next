@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import CheckBox from '../CheckBox/CheckBox'
 import styles from './TicketHeader.module.scss'
 import s_styles from './SetStatus.module.scss'
-import { useClickOutside } from '../../utils/useClickOutside'
+import { useClickOutside } from '../../hooks/useClickOutside'
 import {
     ArrowLeft,
     ChevronDown,

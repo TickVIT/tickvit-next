@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React, { useRef, useState } from 'react'
 import { Mail, Search } from 'react-feather'
-import { useClickOutside } from '../../utils/useClickOutside'
+import { useClickOutside } from '../../hooks/useClickOutside'
 import styles from './Topbar.module.scss'
 
 const Topbar = () => {
