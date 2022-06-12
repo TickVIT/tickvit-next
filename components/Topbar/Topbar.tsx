@@ -10,10 +10,6 @@ const Topbar = () => {
             <SearchInput />
 
             <div className={styles.profileDetails}>
-                <div className={styles.detail}>
-                    <div className={styles.name}>Dr. R Rakesh</div>
-                    <div className={styles.post}>Admin</div>
-                </div>
                 <div className={styles.avatar}>
                     <Image
                         src={'/svg/avatar.svg'}

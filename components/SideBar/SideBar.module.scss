@@ -2,18 +2,17 @@
 
 .outerBox {
     height: 100vh;
-    border-right: 1px colors.$lightest-grey solid;
     top: 0;
     position: sticky;
-    // min-width: ;
-    width: 100%;
-    padding: 28px 20px;
+    width: 263px;
+    padding: 28px 0;
     .firstBox {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-bottom: 10px;
         border-bottom: 1px colors.$lightest-grey solid;
+        padding-inline: 20px;
 
         .text {
             font-family: 'Poppins';
@@ -60,25 +59,28 @@
                 line-height: 26px;
                 letter-spacing: 0.05em;
                 color: colors.$dark-grey;
+                padding-inline: 20px;
             }
             .dataBox {
                 display: flex;
                 flex-direction: column;
+                padding-inline: 5px;
 
                 .dataElement {
                     display: flex;
                     justify-content: space-between;
                     cursor: pointer;
+                    padding-inline: 20px;
+                    border-radius: 5px;
 
                     &:hover {
-                        color: colors.$primary;
-                        // font-weight: 500;
+                        background-color: #f8fafc;
                     }
                     .pText {
                         margin: 10px 0px;
                         font-family: 'Poppins';
                         font-style: normal;
-                        font-weight: 400;
+                        // font-weight: 400;
                         font-size: 15px;
                         line-height: 28px;
                     }
@@ -86,8 +88,20 @@
                     .pNo {
                         color: colors.$dark-grey;
                     }
+
+                    &.selected {
+                        color: colors.$blue;
+                        font-weight: 500;
+                        background-color: #f0f9ff;
+                    }
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .outerBox {
+        display: none;
     }
 }

@@ -1,0 +1,19 @@
+@use '../../styles/colors';
+
+.status {
+    display: flex;
+    font-weight: 500;
+    gap: 10px;
+
+    &.pending {
+        color: colors.$dark-grey;
+    }
+
+    &.inReview {
+        color: colors.$status-blue;
+    }
+
+    &.solved {
+        color: colors.$status-green;
+    }
+}

@@ -18,7 +18,9 @@ const SideBar = () => {
                     <>
                         <p className={classes.section}>Tickets</p>
                         <div className={classes.dataBox}>
-                            <div className={classes.dataElement}>
+                            <div
+                                className={`${classes.dataElement} ${classes.selected}`}
+                            >
                                 <p className={classes.pText}>All Tickets</p>
                                 <p className={classes.pText}>304</p>
                             </div>

@@ -1,0 +1,99 @@
+@use '../../styles/colors';
+.gridItem {
+    display: grid;
+    padding-inline: 15px 20px;
+    grid-template-columns:
+        40px
+        210px 1fr 100px 60px 20px;
+    grid-gap: 20px;
+    align-items: center;
+    min-height: 45px;
+    border-top: 1px solid colors.$lightest-grey;
+    // border-bottom: none;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+
+    &:first-child {
+        border-top: none;
+    }
+    &:last-child {
+        border-bottom: 1px solid colors.$lightest-grey;
+    }
+
+    .itemWrapper {
+        min-width: 0;
+        // min-height: 40px;
+    }
+
+    .item {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .subject,
+    .name {
+        color: colors.$pine-tree;
+    }
+
+    .date {
+        width: 56px;
+        font-size: 13px;
+        color: #5b5b5b;
+        text-align: end;
+        font-weight: 300;
+    }
+
+    &.read {
+        font-weight: 400;
+        background-color: colors.$ticket-read-grey;
+    }
+
+    &.unread {
+        font-weight: 500;
+        background-color: white;
+    }
+
+    &.read,
+    &.unread {
+        &.selected {
+            background-color: colors.$ticket-selected-blue;
+        }
+    }
+
+    .btn {
+        border-radius: 100%;
+        // padding: 10px;
+        height: 35px;
+        width: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            background-color: hsl(210, 14%, 97%);
+        }
+    }
+
+    .moreVertical {
+        // display: flex;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.3s linear, opacity 0.05s linear;
+        color: colors.$dark-grey;
+        // height: 20px;
+    }
+
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+            rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        transition: all 100ms;
+
+        .moreVertical {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}

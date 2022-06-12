@@ -12,11 +12,11 @@ import {
     RotateCw,
 } from 'react-feather'
 import { useCheckBox } from '../../hooks/useCheckBox'
+import shallow from 'zustand/shallow'
 
 interface Props {
     back: boolean
     reload: boolean
-    status: boolean
     check: boolean
     threeDots: boolean
     assign: boolean
@@ -25,12 +25,11 @@ interface Props {
 const TicketHeader = ({
     back,
     reload,
-    status,
     threeDots,
     check,
     assign,
 }: Props) => {
-    const items = useCheckBox((state) => state.items)
+    const items = useCheckBox((state) => state.items, shallow)
     return (
         <div className={styles.container}>
             <div className={styles.leftHead}>
@@ -54,7 +53,9 @@ const TicketHeader = ({
                         <RotateCw color="#939ca8" size={20} />
                     </div>
                 )}
-                {status && <SetStatus />}
+                {items.filter((item) => item.isChecked).length > 0 && (
+                    <SetStatus />
+                )}
                 {threeDots && (
                     <div className={styles.btn} title="options">
                         <MoreVertical color="#939ca8" size={20} />

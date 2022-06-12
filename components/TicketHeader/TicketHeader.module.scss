@@ -7,12 +7,12 @@
     display: flex;
     justify-content: space-between;
     align-content: center;
-    border: 1px solid colors.$lightest-grey;
-    padding: 10px 40px;
+    padding: 10px 40px 10px 15px;
     z-index: 500;
-    top: 85px;
+    top: 82px;
     position: sticky;
     background-color: white;
+    border-bottom: 1px solid colors.$light-grey;
 
     .btn,
     .btnSecondary {
