@@ -16,6 +16,7 @@ type ItemType = {
     date: Date
     read: boolean
     index: number
+    checkbox?: boolean
 }
 
 const TicketItem = ({
@@ -27,6 +28,7 @@ const TicketItem = ({
     date,
     read,
     index,
+    checkbox = true,
 }: ItemType) => {
     const now = new Date()
     const item = useCheckBox((state) =>
@@ -45,16 +47,21 @@ const TicketItem = ({
 
     return (
         <div
-            className={`${classes.gridItem} ${
+            className={`${classes.gridItem} ${checkbox === false && classes.noCheckbox} ${
                 read ? classes.read : classes.unread
             } ${item?.isChecked ? classes.selected : ''}`}
             style={{ zIndex: 60 - index }}
         >
-            <div className={classes.itemWrapper}>
-                <div className={classes.item}>
-                    <CheckBox name={id} checked={item?.isChecked || false} />
+            {checkbox && (
+                <div className={classes.itemWrapper}>
+                    <div className={classes.item}>
+                        <CheckBox
+                            name={id}
+                            checked={item?.isChecked || false}
+                        />
+                    </div>
                 </div>
-            </div>
+            )}
             <div className={classes.itemWrapper}>
                 <div className={`${classes.item} ${classes.name}`}>{name}</div>
             </div>
@@ -63,7 +70,7 @@ const TicketItem = ({
                     {subject}
                 </div>
             </div>
-            <div className={classes.itemWrapper}>
+            <div className={`${classes.itemWrapper} ${classes.status}`}>
                 <StatusLabel status={status} classes={classes.item} />
             </div>
             <div className={classes.itemWrapper}>
@@ -75,13 +82,13 @@ const TicketItem = ({
                         : dateFormat(date, 'shortDate')}
                 </div>
             </div>
-            <div className={classes.itemWrapper}>
+            {checkbox && <div className={classes.itemWrapper}>
                 <div
                     className={`${classes.item} ${classes.moreVertical} ${classes.btn}`}
                 >
                     <MoreVertical size={20} />
                 </div>
-            </div>
+            </div>}
         </div>
     )
 }

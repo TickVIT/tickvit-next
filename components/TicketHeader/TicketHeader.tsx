@@ -22,13 +22,7 @@ interface Props {
     assign: boolean
 }
 
-const TicketHeader = ({
-    back,
-    reload,
-    threeDots,
-    check,
-    assign,
-}: Props) => {
+const TicketHeader = ({ back, reload, threeDots, check, assign }: Props) => {
     const items = useCheckBox((state) => state.items, shallow)
     return (
         <div className={styles.container}>
@@ -49,7 +43,10 @@ const TicketHeader = ({
                 )}
 
                 {reload && (
-                    <div className={styles.btn} title="reload">
+                    <div
+                        className={`${styles.btn} ${styles.reload}`}
+                        title="reload"
+                    >
                         <RotateCw color="#939ca8" size={20} />
                     </div>
                 )}
@@ -64,7 +61,9 @@ const TicketHeader = ({
             </div>
             <div className={styles.rightHead}>
                 {assign && <Assign />}
-                <div className={styles.pageNumber}>1-50 of 315</div>
+                {!(items.filter((item) => item.isChecked).length > 0) && (
+                    <div className={styles.pageNumber}>1-50 of 315</div>
+                )}
                 <div className={styles.btnSecondary} title="previous">
                     <ChevronLeft color="#939ca8" size={20} />
                 </div>

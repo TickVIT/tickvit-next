@@ -1,4 +1,3 @@
-import { ChangeEvent } from 'react'
 import { useCheckBox } from '../../hooks/useCheckBox'
 import classes from './CheckBox.module.scss'
 

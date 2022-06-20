@@ -1,15 +1,33 @@
-import { Plus } from 'react-feather'
+import { useState } from 'react'
+import { Plus, X } from 'react-feather'
+import shallow from 'zustand/shallow'
+import { useInteractions } from '../../hooks/useInteractions'
 import classes from './SideBar.module.scss'
 
 const SideBar = () => {
+    const showSidebar = useInteractions(
+        (state) => state.interactions.showSidebar,
+        shallow
+    )
+    const setInteractions = useInteractions((state) => state.setInteractions)
     return (
-        <div className={classes.outerBox}>
+        <div
+            className={`${classes.outerBox} ${
+                showSidebar ? classes.active : ''
+            }`}
+        >
             <div className={classes.firstBox}>
                 <div className={classes.text}>Tickets</div>
                 <div className={classes.button}>
                     <button className={classes.btn}>
                         <Plus /> New Ticket
                     </button>
+                </div>
+                <div
+                    className={classes.closeButton}
+                    onClick={() => setInteractions('showSidebar', false)}
+                >
+                    <X />
                 </div>
             </div>
 

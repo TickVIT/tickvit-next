@@ -33,7 +33,7 @@ const TicketList = () => {
                                     : undefined
                             }
                             status={selectStatus()}
-                            date={faker.date.past()}
+                            date={faker.date.recent()}
                             read={
                                 Math.round(Math.random()) === 0 ? true : false
                             }

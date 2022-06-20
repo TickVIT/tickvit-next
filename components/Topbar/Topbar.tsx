@@ -1,12 +1,24 @@
+import faker from '@faker-js/faker'
 import Image from 'next/image'
 import React, { useRef, useState } from 'react'
-import { Mail, Search } from 'react-feather'
+import { Mail, Menu, Search } from 'react-feather'
 import { useClickOutside } from '../../hooks/useClickOutside'
+import { useInteractions } from '../../hooks/useInteractions'
+import TicketItem from '../Tickets/TicketItem'
 import styles from './Topbar.module.scss'
+import { v4 as uuidv4 } from 'uuid'
 
 const Topbar = () => {
+    const setInteractions = useInteractions((state) => state.setInteractions)
     return (
         <div className={styles.container}>
+            <div
+                className={styles.hamburger}
+                onClick={() => setInteractions('showSidebar', true)}
+            >
+                <Menu />
+            </div>
+
             <SearchInput />
 
             <div className={styles.profileDetails}>
@@ -49,6 +61,10 @@ const SearchInput = () => {
     ]
 
     const ref = useRef(null)
+    const selectStatus = () => {
+        const rand = Math.round(Math.random() * 2)
+        return rand === 0 ? 'Pending' : rand === 1 ? 'In-review' : 'Solved'
+    }
 
     useClickOutside(ref, setIsOpen, isOpen)
     return (
@@ -65,7 +81,7 @@ const SearchInput = () => {
                 style={{ display: isOpen ? 'block' : 'none' }}
                 ref={ref}
             >
-                {mails.map((mail, index) => (
+                {/* {mails.map((mail, index) => (
                     <div
                         key={index}
                         className={styles.dropdownItem}
@@ -78,7 +94,34 @@ const SearchInput = () => {
                         <div className={styles.issue}>{mail.issue}</div>
                         <div className={styles.date}>{mail.date}</div>
                     </div>
-                ))}
+                ))} */}
+
+                {[...Array(4)].map((_, index) => {
+                    const id = uuidv4()
+                    return (
+                        <TicketItem
+                            key={id}
+                            id={id}
+                            status={selectStatus()}
+                            name={faker.name.findName() + ' 19BCX10010'}
+                            subject={
+                                faker.company.catchPhrase() +
+                                faker.company.catchPhrase()
+                            }
+                            label={
+                                Math.round(Math.random()) === 0
+                                    ? 'Urgent'
+                                    : undefined
+                            }
+                            date={faker.date.recent()}
+                            read={
+                                Math.round(Math.random()) === 0 ? true : false
+                            }
+                            index={index}
+                            checkbox={false}
+                        />
+                    )
+                })}
             </div>
         </div>
     )

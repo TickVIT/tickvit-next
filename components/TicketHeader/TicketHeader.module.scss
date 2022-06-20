@@ -30,6 +30,12 @@
         }
     }
 
+    @media screen and (max-width: 780px) {
+        .reload {
+            display: none;
+        }
+    }
+
     .btnSecondary {
         padding: 4px;
         height: 30px;
@@ -48,5 +54,16 @@
             color: #8a8a8a;
             font-size: 14px;
         }
+    }
+
+    .reload {
+        width: 40px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .container {
+        padding-left: 5px;
+        padding-right: 10px;
     }
 }

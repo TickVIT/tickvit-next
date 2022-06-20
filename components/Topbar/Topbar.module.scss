@@ -17,6 +17,21 @@
 
     justify-content: space-between;
 
+    .hamburger {
+        display: none;
+        border-radius: 100%;
+        padding: 10px;
+        height: 40px;
+        width: 40px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            background-color: hsl(210, 14%, 97%);
+        }
+    }
+
     .input {
         display: flex;
         align-items: center;
@@ -95,10 +110,29 @@
 
         .avatar {
             cursor: pointer;
+            display: flex;
         }
     }
 }
 
 .icon {
     color: colors.$dark-grey;
+}
+
+@media screen and (max-width: 780px) {
+    .container {
+        padding-left: 5px;
+        padding-right: 5px;
+
+        .hamburger {
+            display: flex;
+        }
+
+        .input {
+            // width: 70%;
+            margin-right: 10px;
+            width: 100vw;
+            max-width: unset;
+        }
+    }
 }
