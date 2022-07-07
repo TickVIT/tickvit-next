@@ -47,9 +47,11 @@ const TicketItem = ({
 
     return (
         <div
-            className={`${classes.gridItem} ${checkbox === false && classes.noCheckbox} ${
-                read ? classes.read : classes.unread
-            } ${item?.isChecked ? classes.selected : ''}`}
+            className={`${classes.gridItem} ${
+                checkbox === false && classes.noCheckbox
+            } ${read ? classes.read : classes.unread} ${
+                item?.isChecked ? classes.selected : ''
+            }`}
             style={{ zIndex: 60 - index }}
         >
             {checkbox && (
@@ -82,13 +84,15 @@ const TicketItem = ({
                         : dateFormat(date, 'shortDate')}
                 </div>
             </div>
-            {checkbox && <div className={classes.itemWrapper}>
-                <div
-                    className={`${classes.item} ${classes.moreVertical} ${classes.btn}`}
-                >
-                    <MoreVertical size={20} />
+            {checkbox && (
+                <div className={classes.itemWrapper}>
+                    <div
+                        className={`${classes.item} ${classes.moreVertical} ${classes.btn}`}
+                    >
+                        <MoreVertical size={20} />
+                    </div>
                 </div>
-            </div>}
+            )}
         </div>
     )
 }

@@ -136,7 +136,6 @@ const SideBar = () => {
     )
 }
 
-
 const Wrapper = () => {
     const showSidebar = useInteractions(
         (state) => state.interactions.showSidebar,
