@@ -1,16 +1,19 @@
-import React from 'react'
-
-const useClickOutside = (ref: any, setDropDown: any, dropDown: any) => {
+import React, { MutableRefObject } from 'react'
+const useClickOutside = (
+    ref: MutableRefObject<any>,
+    setOpen: (open?: boolean) => void,
+    open: boolean
+) => {
     React.useEffect(() => {
-        const eventListener = (event: any) => {
-            if (dropDown && ref.current && !ref.current.contains(event.target))
-                setDropDown(false)
+        const eventListener = (event: MouseEvent) => {
+            if (open && ref.current && !ref.current.contains(event.target))
+                setOpen(false)
         }
         document.addEventListener('mousedown', eventListener)
         return () => {
             document.removeEventListener('mousedown', eventListener)
         }
-    }, [ref, dropDown])
+    }, [ref, open])
 }
 
 export { useClickOutside }

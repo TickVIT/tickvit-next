@@ -1,5 +1,11 @@
 @use '../../styles/colors';
 
+.sidebar {
+    display: flex;
+    top: 0;
+    position: sticky;
+}
+
 .outerBox {
     height: 100vh;
     top: 0;
@@ -9,6 +15,12 @@
     background-color: white;
     z-index: 900;
     transition: 350ms;
+    overflow: scroll;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
 
     .firstBox {
         display: flex;
@@ -87,6 +99,8 @@
                         // font-weight: 400;
                         font-size: 15px;
                         line-height: 28px;
+                        stroke: colors.$grey;
+                        fill: colors.$grey;
                     }
 
                     .pNo {
@@ -97,6 +111,47 @@
                         color: colors.$blue;
                         font-weight: 500;
                         background-color: #f0f9ff;
+                    }
+                    &.boxItems {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        gap: 15px;
+
+                        // padding: 10px 10px;
+                        color: colors.$grey;
+                        cursor: pointer;
+                        stroke: colors.$grey;
+                        fill: colors.$grey;
+
+                        .icon {
+                            display: flex;
+                            // color: colors.$grey;
+                        }
+
+                        .itemText {
+                            font-size: 14px;
+                        }
+
+                        .iconText {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                        }
+
+                        &:hover {
+                            color: colors.$rasin-black;
+                            stroke: colors.$rasin-black;
+                            fill: colors.$rasin-black;
+                        }
+
+                        &.selected {
+                            color: colors.$rasin-black;
+                            stroke: colors.$rasin-black;
+                            fill: colors.$rasin-black;
+                        }
                     }
                 }
             }
@@ -119,6 +174,14 @@
     }
 }
 
+.backdrop {
+    display: none;
+}
+
+.navLinks {
+    display: none;
+}
+
 @media screen and (max-width: 780px) {
     .outerBox {
         // display: none;
@@ -138,6 +201,15 @@
         &.active {
             left: 0;
         }
+    }
+    .navLinks {
+        display: block;
+    }
+    .backdrop {
+        display: block;
+        // backdrop-filter: blur(8px);
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.2);
     }
 }
 

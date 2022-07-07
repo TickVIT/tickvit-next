@@ -83,7 +83,7 @@ export const SetStatus = () => {
 
     const ref = useRef(null)
 
-    useClickOutside(ref, setIsOpen, isOpen)
+    useClickOutside(ref, () => setIsOpen(false), isOpen)
     return (
         <div
             ref={ref}
@@ -136,7 +136,7 @@ export const Assign = () => {
     const assignees = ['John Doe', 'John Smith', 'Jane Doe']
     const ref = useRef(null)
 
-    useClickOutside(ref, setIsOpen, isOpen)
+    useClickOutside(ref, () => setIsOpen(false), isOpen)
     return (
         <div
             className={s_styles.container}

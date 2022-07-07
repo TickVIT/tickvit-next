@@ -12,36 +12,35 @@ const TicketList = () => {
     }
 
     const addItem = useCheckBox((state) => state.addItem)
+
+    const generateItems = () => {
+        return [...Array(50)].map((_, index) => {
+            const id = uuidv4()
+            addItem({ id })
+            return (
+                <TicketItem
+                    key={id}
+                    id={id}
+                    name={faker.name.findName() + ' 19BCX10010'}
+                    subject={
+                        faker.company.catchPhrase() +
+                        faker.company.catchPhrase()
+                    }
+                    label={
+                        Math.round(Math.random()) === 0 ? 'Urgent' : undefined
+                    }
+                    status={selectStatus()}
+                    date={faker.date.recent()}
+                    read={Math.round(Math.random()) === 0 ? true : false}
+                    index={index}
+                />
+            )
+        })
+    }
+
     return (
         <div className={classes.table}>
-            <div className={classes.tableBody}>
-                {[...Array(50)].map((_, index) => {
-                    const id = uuidv4()
-                    addItem({ id })
-                    return (
-                        <TicketItem
-                            key={id}
-                            id={id}
-                            name={faker.name.findName() + ' 19BCX10010'}
-                            subject={
-                                faker.company.catchPhrase() +
-                                faker.company.catchPhrase()
-                            }
-                            label={
-                                Math.round(Math.random()) === 0
-                                    ? 'Urgent'
-                                    : undefined
-                            }
-                            status={selectStatus()}
-                            date={faker.date.recent()}
-                            read={
-                                Math.round(Math.random()) === 0 ? true : false
-                            }
-                            index={index}
-                        />
-                    )
-                })}
-            </div>
+            <div className={classes.tableBody}>{generateItems()}</div>
         </div>
     )
 }

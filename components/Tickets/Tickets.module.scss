@@ -190,6 +190,9 @@
 
 @media screen and (min-width: 780px) {
     .noCheckbox {
+        row-gap: 10px;
+        padding: 8px 10px;
+
         .itemWrapper {
             &:nth-child(3) {
                 // status
@@ -206,7 +209,7 @@
         .itemWrapper:nth-last-child(3) {
             // date, status
             display: flex;
-            justify-content: flex-end;
+            // justify-content: flex-end;
         }
     }
 }

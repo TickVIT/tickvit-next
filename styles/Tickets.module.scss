@@ -2,10 +2,21 @@
     display: flex;
     justify-content: space-between;
 
+    .sidebarWrapper {
+        min-width: 263px;
+    }
+
     .main {
         display: flex;
         flex-direction: column;
         width: 100%;
         flex: 1;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .sidebarWrapper {
+        min-width: 0;
+        display: none;
     }
 }

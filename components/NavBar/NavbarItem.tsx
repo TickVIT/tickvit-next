@@ -7,9 +7,18 @@ type NavbarItemProps = {
     icon: React.ReactNode
     text: string
     currentRoute: string
+    sidebar?: boolean
+    className?: string
 }
 
-const NavbarItem = ({ route, currentRoute, icon, text }: NavbarItemProps) => {
+const NavbarItem = ({
+    route,
+    currentRoute,
+    icon,
+    text,
+    sidebar = false,
+    className,
+}: NavbarItemProps) => {
     const [selected, setSelected] = useState(false)
 
     useEffect(() => {
@@ -23,9 +32,13 @@ const NavbarItem = ({ route, currentRoute, icon, text }: NavbarItemProps) => {
     return (
         <Link href={route} passHref>
             <div
-                className={`${classes.boxItems} ${
-                    selected && classes.selected
-                }`}
+                className={
+                    sidebar && className
+                        ? `${className} ${selected ? classes.selected : ''}`
+                        : `${classes.boxItems} ${
+                              selected ? classes.selected : ''
+                          }`
+                }
             >
                 <div className={classes.icon}>{icon}</div>
                 <div className={classes.itemText}>{text}</div>

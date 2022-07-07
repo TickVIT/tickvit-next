@@ -66,7 +66,7 @@ const SearchInput = () => {
         return rand === 0 ? 'Pending' : rand === 1 ? 'In-review' : 'Solved'
     }
 
-    useClickOutside(ref, setIsOpen, isOpen)
+    useClickOutside(ref, () => setIsOpen(false), isOpen)
     return (
         <div
             ref={ref}
@@ -81,21 +81,6 @@ const SearchInput = () => {
                 style={{ display: isOpen ? 'block' : 'none' }}
                 ref={ref}
             >
-                {/* {mails.map((mail, index) => (
-                    <div
-                        key={index}
-                        className={styles.dropdownItem}
-                        onClick={() => {
-                            setIsOpen(!isOpen)
-                        }}
-                    >
-                        <Mail size={18} className={styles.icon} />
-                        <div className={styles.name}>{mail.name}</div>
-                        <div className={styles.issue}>{mail.issue}</div>
-                        <div className={styles.date}>{mail.date}</div>
-                    </div>
-                ))} */}
-
                 {[...Array(4)].map((_, index) => {
                     const id = uuidv4()
                     return (
